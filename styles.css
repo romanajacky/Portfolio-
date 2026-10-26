@@ -1,4 +1,4 @@
-/*UNIVERSAL STYLES*/
+/* UNIVERSAL STYLES */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Prevents navbar from covering section titles when clicking links */
     font-size: 16px;
     width: 100%;
     overflow-x: clip;
@@ -33,7 +34,7 @@ h2 {
     font-weight: 800;
 }
 
-/*NAVBAR*/
+/* NAVBAR */
 
 .navbar {
     position: fixed;
@@ -92,8 +93,39 @@ h2 {
     color: #EFDEFD;
 }
 
+/* HAMBURGER BUTTON (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 5px;
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+}
 
-/*HOME*/
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #D8B4FE;
+    box-shadow: none;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle:hover span {
+    background-color: #EFDEFD;
+}
+
+
+/* HOME */
 
 #home {
     display: flex;
@@ -182,7 +214,7 @@ span {
     color: #110016;
 }
 
-/*ABOUT*/
+/* ABOUT */
 
 #about {
     display: flex;
@@ -259,7 +291,7 @@ abbr:hover {
     margin-bottom: 0;
 }
 
-/*WORK*/
+/* WORK */
 
 #work {
     width: 100%;
@@ -366,7 +398,7 @@ abbr:hover {
     transform: translateY(-1px);
 }
 
-/*FULL-SCREEN PROJECT MODAL*/
+/* FULL-SCREEN PROJECT MODAL */
 
 .project-modal {
     position: fixed;
@@ -443,7 +475,7 @@ abbr:hover {
     display: block;
 }
 
-/*CONTACT*/
+/* CONTACT */
 
 #contact {
     display: flex;
@@ -553,7 +585,7 @@ textarea:focus {
     display: none;
 }
 
-/*FOOTER*/
+/* FOOTER */
 
 .footer {
     width: 100%;
@@ -588,7 +620,7 @@ span.copyright {
     color: #EFDEFD;
 }
 
-/*TABLETS*/
+/* TABLETS */
 
 @media (min-width: 601px) and (max-width: 1000px) {
 
@@ -648,272 +680,17 @@ span.copyright {
     }
 }
 
-
-/*MOBILE PHONES*/
-
-@media (max-width: 600px) {
-
-    html {
-        font-size: 15px;
-        scroll-padding-top: 1rem;
-    }
-
-    /* NAVBAR */
-
-    .navbar {
-        position: relative;
-        min-height: auto;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 1rem 1rem 1.25rem;
-    }
-
-    .logo-container {
-        width: 100%;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .logo h1 {
-        font-size: clamp(1.4rem, 5.5vw, 1.8rem);
-        line-height: 1.3;
-        margin: 0.2rem 0 0.4rem;
-    }
-
-    .logo_subtitle {
-        font-size: clamp(0.75rem, 3vw, 0.95rem);
-        line-height: 1.4;
-        margin: 0;
-    }
-
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 0.6rem 1rem;
-        margin-top: 0.35rem;
-    }
-
-    .nav-links a {
-        font-size: 0.75rem;
-        letter-spacing: 0.2px;
-        padding: 0.25rem 0;
-    }
-
-    /* Home */
-
-    #home {
-        min-height: 85vh;
-        min-height: 85svh;
-        padding: 3rem 1.25rem 4rem;
-        justify-content: center;
-        align-items: flex-start;
-        background-size: cover;
-        background-position: center;
-    }
-
-    #home p:first-child {
-        font-size: clamp(1.7rem, 6.5vw, 2.3rem);
-        line-height: 1.3;
-        margin: 0 0 1.5rem;
-    }
-
-    #home p:nth-child(2) {
-        font-size: clamp(1rem, 4vw, 1.15rem);
-        line-height: 1.7;
-        margin: 0 0 1.75rem;
-    }
-
-    .btn {
-        padding: 0.9rem 1.1rem;
-        font-size: 0.8rem;
-        letter-spacing: 0.08em;
-    }
-
-    /*ABOUT*/
-
-    #about {
-        min-height: auto;
-        padding: 3.5rem 1.25rem;
-    }
-
-    #about h3 {
-        font-size: clamp(1.7rem, 6vw, 2.2rem);
-        margin-bottom: 1.5rem;
-    }
-
-    .flex-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.75rem;
-    }
-
-    .profile {
-        width: 70%;
-        max-width: 240px;
-        height: auto;
-        flex-shrink: 1;
-    }
-
-    .aboutparagraph {
-        width: 100%;
-    }
-
-    .aboutparagraph p {
-        font-size: 1rem;
-        line-height: 1.8;
-        text-align: left;
-        margin-bottom: 1.25rem;
-    }
-
-    /*WORK*/
-
-    #work {
-        min-height: auto;
-        padding: 3.5rem 1.25rem;
-    }
-
-    .seemywork {
-        font-size: clamp(1.7rem, 6vw, 2.2rem);
-        margin-bottom: 2rem;
-    }
-
-    .projects-container {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 1.5rem;
-        width: 100%;
-    }
-
-    .project-card {
-        aspect-ratio: auto;
-        min-height: 250px;
-        padding: 1.25rem;
-    }
-
-    .project-card h4 {
-        font-size: 1.25rem;
-    }
-
-    .project-card .information {
-        font-size: 0.95rem;
-    }
-
-    #work p {
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-
-    #work a.view-project {
-        max-width: 100%;
-        padding: 0.75rem 1rem;
-    }
-
-    /*PROJECT MODAL */
-
-    .project-modal {
-        height: 100vh;
-        height: 100dvh;
-    }
-
-    .project-modal-navbar {
-        min-height: 48px;
-        padding: 0.25rem 0.75rem;
-    }
-
-    #project-modal #close-project {
-        top: 2px;
-        right: 8px;
-        width: 44px;
-        height: 44px;
-        font-size: 2.5rem;
-    }
-
-    #project-frame {
-        width: 100%;
-        min-height: 0;
-    }
-
-    /*CONTACT*/
-
-    #contact {
-        min-height: auto;
-        padding: 3.5rem 1.25rem;
-    }
-
-    .connect {
-        font-size: clamp(1.7rem, 6vw, 2.2rem);
-        margin-bottom: 1.5rem;
-    }
-
-    .form-container {
-        width: 100%;
-        max-width: 500px;
-        padding: 1.25rem;
-        border-radius: 10px;
-    }
-
-    .getintouch {
-        font-size: 1.4rem;
-        line-height: 1.4;
-    }
-
-    label {
-        font-size: 0.95rem;
-    }
-
-    input,
-    textarea {
-        width: 100%;
-        min-width: 0;
-        padding: 0.8rem;
-        font-size: 16px;
-    }
-
-    textarea {
-        min-height: 120px;
-    }
-
-    #contact form button[type="submit"] {
-        padding: 0.9rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    #form-status {
-        overflow-wrap: anywhere;
-    }
-
-    /*FOOTER*/
-
-    .footer {
-        padding: 1.5rem 1rem;
-        font-size: 0.85rem;
-    }
-
-    .footer p.name {
-        font-size: 0.9rem;
-    }
-
-    .footer p.mission {
-        font-size: 0.85rem;
-        letter-spacing: 0.2px;
-    }
-}
-
 /* MOBILE PHONES */
 
 @media (max-width: 600px) {
 
     html {
         font-size: 15px;
-        scroll-padding-top: 1rem;
+        scroll-padding-top: 80px; /* Adjust for mobile navbar height */
     }
 
-    /* MOBILE NAVBAR: SCROLLS AWAY WITH THE PAGE */
-
-   .navbar {
+    /* MOBILE NAVBAR */
+    .navbar {
         position: fixed;
         top: 0;
         left: 0;
@@ -928,8 +705,6 @@ span.copyright {
         background-color: #0C0613;
         z-index: 1000;
     }
-
-    /* NAME AND SHORT PROFESSIONAL DESCRIPTION */
 
     .logo-container {
         flex: 1;
@@ -951,39 +726,10 @@ span.copyright {
         margin: 0;
     }
 
-    /* THREE-LINE HAMBURGER BUTTON */
-
+    /* HAMBURGER MENU */
     .menu-toggle {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        gap: 5px;
-        width: 42px;
-        height: 42px;
-        padding: 8px;
-        border: none;
-        border-radius: 4px;
-        background: transparent;
-        cursor: pointer;
     }
-
-    .menu-toggle span {
-        display: block;
-        width: 25px;
-        height: 2px;
-        border-radius: 2px;
-        background-color: #D8B4FE;
-        box-shadow: none;
-        transition: transform 0.25s ease, opacity 0.25s ease;
-    }
-
-    .menu-toggle:hover span {
-        background-color: #EFDEFD;
-    }
-
-    /* HIDE NAVIGATION LINKS UNTIL THE BUTTON IS TAPPED */
 
     .nav-links {
         display: none;
@@ -1020,17 +766,15 @@ span.copyright {
     }
 
     /* HOME */
-
-#home {
-    min-height: 85vh;
-    min-height: 85svh;
-    padding: 6rem 1.25rem 4rem;
-    justify-content: center;
-    align-items: flex-start;
-    background-size: cover;
-    background-position: center;
-}
-
+    #home {
+        min-height: 85vh;
+        min-height: 85svh;
+        padding: 6rem 1.25rem 4rem; /* 6rem top padding clears the fixed navbar */
+        justify-content: center;
+        align-items: flex-start;
+        background-size: cover;
+        background-position: center;
+    }
 
     #home p:first-child {
         font-size: clamp(1.7rem, 6.5vw, 2.3rem);
@@ -1051,7 +795,6 @@ span.copyright {
     }
 
     /* ABOUT */
-
     #about {
         min-height: auto;
         padding: 3.5rem 1.25rem;
@@ -1087,7 +830,6 @@ span.copyright {
     }
 
     /* WORK */
-
     #work {
         min-height: auto;
         padding: 3.5rem 1.25rem;
@@ -1129,7 +871,6 @@ span.copyright {
     }
 
     /* PROJECT MODAL */
-
     .project-modal {
         height: 100vh;
         height: 100dvh;
@@ -1154,7 +895,6 @@ span.copyright {
     }
 
     /* CONTACT */
-
     #contact {
         min-height: auto;
         padding: 3.5rem 1.25rem;
@@ -1203,7 +943,6 @@ span.copyright {
     }
 
     /* FOOTER */
-
     .footer {
         padding: 1.5rem 1rem;
         font-size: 0.85rem;
@@ -1261,18 +1000,6 @@ span.copyright {
     }
 }
 
-/* SHOW THE HAMBURGER ONLY ON MOBILE */
-
-.menu-toggle {
-    display: none;
-}
-
-@media (max-width: 600px) {
-    .menu-toggle {
-        display: flex;
-    }
-}
-
 /* REDUCED MOTION ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1287,47 +1014,5 @@ span.copyright {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
-    }
-}
-
-/*EXTRA-SMALL PHONES*/
-
-@media (max-width: 360px) {
-
-    .navbar {
-        padding: 0.85rem 0.65rem;
-    }
-
-    .logo h1 {
-        font-size: 1.3rem;
-    }
-
-    .nav-links {
-        gap: 0.5rem 0.7rem;
-    }
-
-    .nav-links a {
-        font-size: 0.7rem;
-    }
-
-    #home,
-    #about,
-    #work,
-    #contact {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-    .profile {
-        width: 80%;
-        max-width: 210px;
-    }
-
-    .project-card {
-        padding: 1rem;
-    }
-
-    .form-container {
-        padding: 1rem;
     }
 }
