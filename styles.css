@@ -913,10 +913,10 @@ span.copyright {
 
     /* MOBILE NAVBAR: SCROLLS AWAY WITH THE PAGE */
 
-    .navbar {
-        position: relative;
-        top: auto;
-        left: auto;
+   .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
         min-height: auto;
         display: flex;
@@ -925,6 +925,7 @@ span.copyright {
         align-items: center;
         gap: 0.75rem;
         padding: 0.85rem 1rem;
+        background-color: #0C0613;
         z-index: 1000;
     }
 
