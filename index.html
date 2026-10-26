@@ -385,6 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         const button = form.querySelector('[type="submit"]');
+        const originalButtonText = button.textContent;
         const status = document.getElementById("form-status");
         button.disabled = true;
 
