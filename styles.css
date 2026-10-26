@@ -339,8 +339,6 @@ abbr:hover {
  transform: translateY(-1px); 
 } 
 
-
-/* FULL-SCREEN PROJECT MODAL */
 .project-modal {
     position: fixed;
     inset: 0;
@@ -358,8 +356,6 @@ abbr:hover {
     display: none !important;
 }
 
-
-/* REDUCED PROJECT NAVBAR */
 .project-modal-navbar {
     position: relative;
     top: 0;
@@ -379,8 +375,6 @@ abbr:hover {
     padding: 0.25rem 1rem;
     z-index: 1000;
 }
-
-
 
 #project-modal #close-project {
     position: fixed;
@@ -425,8 +419,6 @@ abbr:hover {
     transform: none;
 }
 
-
-/* IFRAME FILLS THE SPACE BELOW THE NAVBAR */
 #project-frame {
     position: relative;
     flex: 1 1 auto;
@@ -437,8 +429,6 @@ abbr:hover {
     background-color: #FFFFFF;
     display: block;
 }
-
-
 
 #contact { 
   display: flex; 
@@ -584,6 +574,359 @@ span.copyright {
     padding: 4rem 2rem; 
     } 
 }
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        gap: 1rem;
+        padding: 0.75rem 3%;
+    }
+
+    .logo-container {
+        max-width: 40%;
+    }
+
+    .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo_subtitle {
+        font-size: 0.8rem;
+    }
+
+    .nav-links {
+        gap: 0.75rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    #home {
+        padding: 120px 3rem 4rem;
+    }
+
+    #about {
+        padding: 5rem 3rem;
+    }
+
+    .flex-container {
+        gap: 2rem;
+    }
+
+    .profile {
+        max-width: 280px;
+    }
+
+    #work {
+        padding: 4rem 2rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    #contact {
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    html {
+        font-size: 15px;
+        scroll-padding-top: 100px;
+    }
+
+    .navbar {
+        position: relative;
+        min-height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1rem;
+    }
+
+    .logo-container {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .logo_subtitle {
+        font-size: 0.85rem;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.65rem 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem;
+        letter-spacing: 0.3px;
+        padding: 0.25rem 0;
+    }
+
+    #home {
+        min-height: 85vh;
+        min-height: 85svh;
+        padding: 3rem 1.25rem;
+        align-items: flex-start;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home p:first-child {
+        font-size: clamp(1.7rem, 7vw, 2.3rem);
+        line-height: 1.25;
+        margin: 1rem 0 1.25rem;
+    }
+
+    #home p:nth-child(2) {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn {
+        max-width: 100%;
+        padding: 0.9rem 1rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+    }
+
+    #about {
+        min-height: auto;
+        padding: 3.5rem 1.25rem;
+    }
+
+    #about h3 {
+        font-size: clamp(1.7rem, 6vw, 2.2rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.75rem;
+    }
+
+    .profile {
+        width: 70%;
+        max-width: 240px;
+        height: auto;
+        flex-shrink: 1;
+    }
+
+    .aboutparagraph {
+        width: 100%;
+    }
+
+    .aboutparagraph p {
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: left;
+        margin-bottom: 1.25rem;
+    }
+
+    #work {
+        min-height: auto;
+        padding: 3.5rem 1.25rem;
+    }
+
+    .seemywork {
+        font-size: clamp(1.7rem, 6vw, 2.2rem);
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .projects-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .project-card {
+        aspect-ratio: auto;
+        min-height: 250px;
+        padding: 1.25rem;
+    }
+
+    .project-card h4 {
+        font-size: 1.25rem;
+    }
+
+    .project-card .information {
+        font-size: 0.95rem;
+    }
+
+    #work p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    #work a.view-project {
+        display: inline-block;
+        max-width: 100%;
+        padding: 0.75rem 1rem;
+    }
+
+    .project-modal {
+        height: 100vh;
+        height: 100dvh;
+    }
+
+    .project-modal-navbar {
+        min-height: 48px;
+        padding: 0.25rem 0.75rem;
+    }
+
+    #project-modal #close-project {
+        top: 2px;
+        right: 8px;
+        width: 44px;
+        height: 44px;
+        font-size: 2.5rem;
+    }
+
+    #project-frame {
+        width: 100%;
+        min-height: 0;
+    }
+
+    #contact {
+        min-height: auto;
+        padding: 3.5rem 1.25rem;
+    }
+
+    .connect {
+        font-size: clamp(1.7rem, 6vw, 2.2rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 500px;
+        padding: 1.25rem;
+        border-radius: 10px;
+    }
+
+    .getintouch {
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    label {
+        font-size: 0.95rem;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        min-width: 0;
+        padding: 0.8rem;
+        font-size: 16px;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+
+    #contact form button[type="submit"] {
+        padding: 0.9rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #form-status {
+        overflow-wrap: anywhere;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .footer p.name {
+        font-size: 0.9rem;
+    }
+
+    .footer p.mission {
+        font-size: 0.85rem;
+        letter-spacing: 0.2px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .navbar {
+        padding: 0.85rem 0.65rem;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem 0.7rem;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+    #home,
+    #about,
+    #work,
+    #contact {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .profile {
+        width: 80%;
+        max-width: 210px;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
+
 
 
 
