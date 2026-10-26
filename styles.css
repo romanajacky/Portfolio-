@@ -769,7 +769,7 @@ span.copyright {
         margin-bottom: 1.25rem;
     }
 
-    /* Work */
+    /*WORK*/
 
     #work {
         min-height: auto;
@@ -811,7 +811,7 @@ span.copyright {
         padding: 0.75rem 1rem;
     }
 
-    /* Project modal */
+    /*PROJECT MODAL */
 
     .project-modal {
         height: 100vh;
@@ -836,7 +836,7 @@ span.copyright {
         min-height: 0;
     }
 
-    /* Contact */
+    /*CONTACT*/
 
     #contact {
         min-height: auto;
@@ -885,7 +885,7 @@ span.copyright {
         overflow-wrap: anywhere;
     }
 
-    /* Footer */
+    /*FOOTER*/
 
     .footer {
         padding: 1.5rem 1rem;
@@ -902,6 +902,84 @@ span.copyright {
     }
 }
 
+/*MOBILE*/
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 110px;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.55rem 1rem 0.65rem;
+        z-index: 1000;
+    }
+
+    .logo-container {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: clamp(1.3rem, 5.5vw, 1.6rem);
+        line-height: 1.2;
+        margin: 0.1rem 0 0.2rem;
+    }
+
+    .logo_subtitle {
+        font-size: 0.78rem;
+        line-height: 1.3;
+        margin: 0.1rem 0;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.4rem 0.85rem;
+        margin-top: 0.2rem;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+        letter-spacing: 0.2px;
+        padding: 0.15rem 0;
+    }
+
+    #home {
+        min-height: 100vh;
+        min-height: 100svh;
+        padding: 105px 1.25rem 2.5rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #home p:first-child {
+        font-size: clamp(1.7rem, 6.5vw, 2.3rem);
+        line-height: 1.3;
+        margin: 0 0 1rem;
+    }
+
+    #home p:nth-child(2) {
+        font-size: 1rem;
+        line-height: 1.65;
+        margin: 0 0 1.5rem;
+    }
+}
 
 /*EXTRA-SMALL PHONES*/
 
