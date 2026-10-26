@@ -1024,8 +1024,7 @@ span.copyright {
 #home {
     min-height: 85vh;
     min-height: 85svh;
-    padding: 2rem 1.25rem 4rem;
-    padding-top: 2rem;
+    padding: 6rem 1.25rem 4rem;
     justify-content: center;
     align-items: flex-start;
     background-size: cover;
