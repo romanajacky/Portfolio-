@@ -28,6 +28,8 @@ img {
 
 h1, h2, h3, p {
     overflow-wrap: break-word;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
+        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h2 {
