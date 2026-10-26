@@ -1021,15 +1021,29 @@ span.copyright {
 
     /* HOME */
 
+#home {
+    min-height: 85vh;
+    min-height: 85svh;
+    padding: 2rem 1.25rem 4rem;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add space for the fixed navbar */
+@media (max-width: 600px) {
     #home {
-        min-height: 85vh;
-        min-height: 85svh;
-        padding: 2rem 1.25rem 4rem;
-        justify-content: center;
-        align-items: flex-start;
-        background-size: cover;
-        background-position: center;
+        margin-top: 0;
+        padding-top: 2rem;
     }
+
+    main {
+        padding-top: 100px;
+    }
+}
+
 
     #home p:first-child {
         font-size: clamp(1.7rem, 6.5vw, 2.3rem);
